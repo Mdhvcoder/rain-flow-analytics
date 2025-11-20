@@ -1,7 +1,7 @@
-
+#ressult1.png
 # 🌧️ RainFlow Analytics
 
-A modern, full-stack web application for real-time rainfall data analysis and visualization. Upload CSV data, get automated insights, and generate beautiful visualizations.
+A modern, full-stack web application for real-time rainfall data analysis and visualization. Upload CSV data, get automated insights, and generate visualizations.
 
 ![RainFlow Analytics](https://img.shields.io/badge/React-18.2.0-blue) ![Flask](https://img.shields.io/badge/Flask-2.3.3-green) ![License](https://img.shields.io/badge/License-MIT-yellow) [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://rain-flow-analytics-mdhv.vercel.app/)
 
