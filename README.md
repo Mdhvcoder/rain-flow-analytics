@@ -1,4 +1,4 @@
-#ressult1.png
+
 # 🌧️ RainFlow Analytics
 
 A modern, full-stack web application for real-time rainfall data analysis and visualization. Upload CSV data, get automated insights, and generate visualizations.
@@ -157,7 +157,8 @@ We welcome contributions! Please feel free to submit issues and enhancement requ
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
+**RESULT**
+![result](ressult1.png)
 
 **RainFlow Analytics** - Making rainfall data analysis beautiful and accessible for everyone. 💧
-**Results**
+
