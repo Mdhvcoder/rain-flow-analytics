@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './RainFlowAnalytics.css';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_BASE_URL ='https://rain-flow-analytics.onrender.com';
 
 const RainFlowAnalytics = () => {
     const [data, setData] = useState(null);

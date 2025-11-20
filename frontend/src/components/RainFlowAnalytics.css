@@ -475,3 +475,22 @@
 .stat-card, .trend-card, .visualization-card {
     animation: fadeInUp 0.6s ease-out;
 }
+.test-connection-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.test-connection-btn:hover {
+    background: #218838;
+}
+
+.test-connection-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
