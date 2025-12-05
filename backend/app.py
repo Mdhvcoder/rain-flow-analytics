@@ -18,10 +18,10 @@ class RainFlowAnalyzer:
         self.trends = []
         
     def load_data(self, file_path):
-        """Load and preprocess rain flow data"""
+        
         try:
             self.data = pd.read_csv(file_path)
-            # Ensure required columns exist
+            
             if 'rainfall' not in self.data.columns:
                 return False
                 
@@ -52,7 +52,7 @@ class RainFlowAnalyzer:
                 'value': f'{avg_rainfall:.2f}'
             })
             
-            # Monthly patterns if timestamp exists
+            
             if hasattr(self.data.index, 'month'):
                 monthly_avg = self.data.groupby(self.data.index.month)['rainfall'].mean()
                 wettest_month = monthly_avg.idxmax()
@@ -86,7 +86,7 @@ class RainFlowAnalyzer:
         return trends
     
     def generate_visualization(self, trend_type):
-        """Generate various visualizations"""
+        
         try:
             plt.figure(figsize=(10, 6))
             
@@ -107,7 +107,7 @@ class RainFlowAnalyzer:
                     plt.ylabel('Rainfall (mm)')
                 
             elif trend_type == 'time_series' and hasattr(self.data.index, 'day'):
-                # Show last 30 days if available
+                
                 recent_data = self.data.tail(30)
                 plt.plot(recent_data.index, recent_data['rainfall'])
                 plt.title('Recent Rainfall Trend (Last 30 days)')
@@ -117,7 +117,7 @@ class RainFlowAnalyzer:
             
             plt.tight_layout()
             
-            # Convert plot to base64
+           
             img = io.BytesIO()
             plt.savefig(img, format='png', bbox_inches='tight')
             img.seek(0)
@@ -147,12 +147,12 @@ def load_data():
         if file.filename == '':
             return jsonify({'error': 'No file selected'}), 400
         
-        # Save temporarily and load
+        
         temp_path = 'temp_data.csv'
         file.save(temp_path)
         
         if analyzer.load_data(temp_path):
-            # Clean up temp file
+            
             if os.path.exists(temp_path):
                 os.remove(temp_path)
             return jsonify({'message': 'Data loaded successfully', 'rows': len(analyzer.data)})
@@ -192,7 +192,7 @@ def get_visualization(trend_type):
 
 @app.route('/api/report', methods=['GET'])
 def generate_report():
-    """Generate comprehensive analysis report"""
+    
     try:
         trends = analyzer.analyze_trends()
         
